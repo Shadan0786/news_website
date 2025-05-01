@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>User Profile</title>
+    <style>
+        body {
+            background-color: #160744;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .profile-container {
+            background-color: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .profile-container img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #160744;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.profile-container img:hover {
+    transform: scale(1.05);
+}
+
+
+        .profile-container h2 {
+            margin: 10px 0 5px;
+        }
+
+        .profile-container p {
+            margin: 5px 0 20px;
+        }
+
+        .profile-container button {
+            margin: 10px 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #160744;
+            color: white;
+            font-size: 14px;
+        }
+
+        .profile-container button:hover {
+            background-color: #0f0635;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img src="profile.png" alt="User Photo" id="user-photo"/>
+        <h2 id="user-name">John Doe</h2>
+        <p id="user-email">johndoe@example.com</p>
+        <button id="reset-password-btn">Reset Password</button>
+        <button id="home-btn">🏠 Home</button>
+
+    </div>
+
+    <script>
+        // Simulated data fetch from localStorage (or from API)
+        const name = localStorage.getItem("userName") || "John Doe";
+        const email = localStorage.getItem("userEmail") || "johndoe@example.com";
+        const photoUrl = localStorage.getItem("userPhoto") || "profile.png";
+
+        document.getElementById("user-name").textContent = name;
+        document.getElementById("user-email").textContent = email;
+        document.getElementById("user-photo").src = photoUrl;
+
+        document.getElementById("home-btn").addEventListener("click", () => {
+    window.location.href = "index.html";
+});
+
+      
+
+        document.getElementById("reset-password-btn").addEventListener("click", () => {
+            alert("A password reset link has been sent to your email.");
+            // Optionally redirect to a reset-password page
+            // window.location.href = "reset-password.html";
+        });
+    </script>
+
+</body>
+</html>
