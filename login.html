@@ -80,7 +80,8 @@
                 if (data.status === "success") {
                     // ✅ Redirect to homepage or dashboard
                     localStorage.setItem("isLoggedIn", "true");
-                    localStorage.setItem("userEmail", data.data[0].email); // optional
+                    localStorage.setItem("userEmail", data.data[0].email);
+                    localStorage.setItem("userName", data.data[0].name); // ✅ Add this
 
                     window.location.href = "index.html";
                 }
