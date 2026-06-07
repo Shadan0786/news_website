@@ -209,7 +209,7 @@ This is a collaborative project. To contribute:
 
 ## 📄 License
 
-Specify your project license here (e.g., MIT, GPL, etc.)
+------
 
 ## 📧 Contact
 
@@ -217,4 +217,3 @@ For questions or issues, please reach out to the project maintainers.
 
 ---
 
-**Note:** Make sure to add `.env` and `node_modules/` to your `.gitignore` file to avoid committing sensitive information and dependencies.
